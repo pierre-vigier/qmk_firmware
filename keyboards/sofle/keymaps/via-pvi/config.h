@@ -24,7 +24,11 @@ for more options.
 
 // No RGB support - not needed
 #define DYNAMIC_KEYMAP_LAYER_COUNT 5
-#define TAPPING_TERM 100
+#ifdef TAPPING_TERM
+    #undef TAPPING_TERM
+    #define TAPPING_TERM 220
+#endif
+#define IGNORE_MOD_TAP_INTERRUPT
 
 #if defined(KEYBOARD_sofle_rev1)
 // Add RGB underglow and top facing lighting
